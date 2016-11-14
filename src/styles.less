@@ -16,4 +16,13 @@ html {
         font-family: @font-primary;
         color: @font-color;
     }
+
+    * {
+        -webkit-transition: @transition;
+        -moz-transition: @transition;
+        -o-transition: @transition;
+        transition: @transition;
+
+        transition-property: margin;
+    }
 }
