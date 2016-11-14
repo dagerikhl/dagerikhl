@@ -1,0 +1,34 @@
+@color-primary: #2196f3;
+@color-secondary: #1976d2;
+@color-tertiary: #1565c0;
+@color-accent: #448aff;
+
+// @font-color: #ffffff;
+// @font-color-passive: darken(@font-color, 25%);
+
+header {
+    display: flex;
+
+    height: 64px;
+
+    padding: 0 2em;
+
+    background: @color-accent;
+
+    .header-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        .title {
+            font-size: 150%;
+        }
+
+        .subtitle {
+            margin-right: 2em;
+
+            font-style: italic;
+        }
+    }
+}
