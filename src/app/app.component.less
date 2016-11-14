@@ -1,28 +1,35 @@
 @import (less) "../common.less";
 
-header {
+.content {
     display: flex;
+    flex-direction: column;
 
-    height: 64px;
+    margin-left: 20px;
 
-    padding: 0 2em;
-
-    background: @color-accent;
-
-    .header-titles {
+    > .content-header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
 
-        .title {
-            font-size: 150%;
-        }
+        height: 64px;
 
-        .subtitle {
-            margin-right: 2em;
+        padding: 0 2em;
 
-            font-style: italic;
+        background: @color-accent;
+
+        > .header-titles {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            > .title {
+                font-size: 150%;
+            }
+
+            > .subtitle {
+                margin-right: 2em;
+
+                font-style: italic;
+            }
         }
     }
 }
