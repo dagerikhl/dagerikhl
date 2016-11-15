@@ -45,12 +45,14 @@ nav {
         }
     }
 
-    .link {
+    .link:not(.active-link) {
         &:hover {
-            cursor: pointer;
-
-            color: @link-color-secondary-active;
+            color: @link-color-secondary-hover;
         }
+    }
+
+    .active-link {
+        color: @link-color-secondary-active;
     }
 
     > dl {

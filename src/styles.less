@@ -16,12 +16,18 @@ html {
         font-family: @font-primary;
         color: @font-color-primary;
 
-        .link {
+        .link:not(.active-link) {
             &:hover {
                 cursor: pointer;
 
-                color: @link-color-primary-active;
+                color: @link-color-primary-hover;
             }
+        }
+
+        .active-link {
+            padding-left: .5em;
+
+            color: @link-color-primary-active;
         }
     }
 
