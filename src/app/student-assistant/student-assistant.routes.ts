@@ -9,7 +9,7 @@ export const studentAssistantRoutes: Routes = [
         component: StudentAssistantComponent,
         children: [
             {
-                path: ':course',
+                path: ':coursecode',
                 component: CourseComponent
             }
         ]

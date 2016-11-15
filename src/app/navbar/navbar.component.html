@@ -1,19 +1,14 @@
 <nav>
     <dl>
-        <dt>Student Assistant</dt>
-        <dd class="link"
-            routerLink="/student-assistant/tdt4110"
-            routerLinkActive="active-link">
-            TDT4110 (Python)
-        </dd>
-        <dd class="link"
-            routerLink="/student-assistant/tdt4100"
-            routerLinkActive="active-link">
-            TDT4100 (Java)
-        </dd>
-
-        <dt>Other</dt>
-        <dd class="link">Placeholder</dd>
+        <div *ngFor="let route of routes">
+            <dt>{{route.key.value}}</dt>
+            <dd class="link"
+                routerLink="/{{route.key.key}}/{{subRoute.key}}"
+                routerLinkActive="active-link"
+                *ngFor="let subRoute of route.value">
+                {{subRoute.value}}
+            </dd>
+        </div>
     </dl>
 </nav>
 

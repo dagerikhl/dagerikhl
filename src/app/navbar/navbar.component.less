@@ -55,18 +55,20 @@ nav {
         color: @link-color-secondary-active;
     }
 
-    > dl {
-        display: flex;
-        flex-direction: column;
+    > div {
+        > dl {
+            display: flex;
+            flex-direction: column;
 
-        margin: 2em @width-closed;
+            margin: 2em @width-closed;
 
-        > dt, > dd {
-            margin-top: .5em;
-        }
+            > dt, > dd {
+                margin-top: .5em;
+            }
 
-        > dt {
-            font-weight: bold;
+            > dt {
+                font-weight: bold;
+            }
         }
     }
 }
