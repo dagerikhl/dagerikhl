@@ -15,6 +15,18 @@ export class NavbarComponent implements OnInit {
         this.routes = [
             {
                 key: {
+                    key: 'home',
+                    value: 'Home'
+                },
+                value: [
+                    {
+                        key: '',
+                        value: 'Home'
+                    }
+                ]
+            },
+            {
+                key: {
                     key: 'student-assistant',
                     value: 'Student Assistant'
                 },

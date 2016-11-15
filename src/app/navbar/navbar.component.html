@@ -2,11 +2,12 @@
     <dl>
         <div *ngFor="let route of routes">
             <dt>{{route.key.value}}</dt>
-            <dd class="link"
-                routerLink="/{{route.key.key}}/{{subRoute.key}}"
-                routerLinkActive="active-link"
+            <dd class="link-secondary"
                 *ngFor="let subRoute of route.value">
-                {{subRoute.value}}
+                <a routerLink="/{{route.key.key}}/{{subRoute.key}}"
+                    routerLinkActive="active-link">
+                    {{subRoute.value}}
+                </a>
             </dd>
         </div>
     </dl>
