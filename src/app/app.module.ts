@@ -4,26 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
+
+import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CourseComponent } from './course/course.component';
-// import { CourseComponent } from './student-assistant/course/course.component';
+
+import { StudentAssistantModule } from './student-assistant/student-assistant.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent,
-        CourseComponent//,
-        // CourseComponent
+        NavbarComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+        StudentAssistantModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    exports: [ RouterModule ],
+    providers: [ ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }
