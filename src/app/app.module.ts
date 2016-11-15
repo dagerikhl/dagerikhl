@@ -8,12 +8,14 @@ import { appRoutes } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 import { StudentAssistantModule } from './student-assistant/student-assistant.module';
 
 @NgModule({
     declarations: [
         AppComponent,
+        HomeComponent,
         NavbarComponent
     ],
     imports: [

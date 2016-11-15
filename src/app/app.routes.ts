@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CourseComponent } from './student-assistant/course/course.component';
+import { HomeComponent } from './home/home.component';
 
 export const appRoutes: Routes = [
+    { path: 'home', component: HomeComponent },
     {
         path: '',
-        redirectTo: '/student-assistant/tdt4110',
+        redirectTo: '/home',
         pathMatch: 'full'
     }
 ];
