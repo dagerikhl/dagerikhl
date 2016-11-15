@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
                 value: [
                     {
                         key: 'ph',
-                        value: 'Placeholder'
+                        value: 'Placeholder (can you not)'
                     }
                 ]
             }
