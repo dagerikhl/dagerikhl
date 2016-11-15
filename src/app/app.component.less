@@ -1,7 +1,8 @@
 @import (less) "../common.less";
 
-@header-height: 64px;
 @navbar-width-closed: 20px;
+@header-height: 64px;
+@avatar-size: 48px;
 
 .content {
     display: flex;
@@ -11,19 +12,31 @@
 
     > .content-header {
         display: flex;
+        align-items: center;
 
-        height: 64px;
+        height: @header-height;
 
         padding: 0 2em;
 
+        z-index: 12;
+
         background: @color-primary;
         box-shadow: @md-resting-shadow-12;
+
+        > .avatar {
+            height: @avatar-size;
+            width: @avatar-size;
+
+            border-radius: 50%;
+        }
 
         > .header-titles {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
+
+            margin-left: 1em;
 
             > .title {
                 font-size: 150%;
