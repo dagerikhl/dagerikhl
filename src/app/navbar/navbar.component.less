@@ -1,18 +1,38 @@
 @import (less) "../../common.less";
 
+@width-open: 300px;
+@width-closed: 20px;
+
+.cover {
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+
+    background: black;
+    opacity: 0;
+}
+
 nav {
     position: fixed;
 
     top: 0;
-    left: -280px;
+    left: -@width-open + @width-closed;
     
     height: 100%;
-    width: 300px;
+    width: @width-open;
 
-    background: @color-tertiary;
+    z-index: 16;
+
+    background: @color-accent;
+    box-shadow: @md-resting-shadow-16;
 
     &:hover {
         left: 0;
+
+        & ~ .cover {
+            opacity: .25;
+        }
     }
 
     > ul {

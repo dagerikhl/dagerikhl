@@ -1,10 +1,13 @@
 @import (less) "../common.less";
 
+@header-height: 64px;
+@navbar-width-closed: 20px;
+
 .content {
     display: flex;
     flex-direction: column;
 
-    margin-left: 20px;
+    margin-left: @navbar-width-closed;
 
     > .content-header {
         display: flex;
@@ -13,7 +16,8 @@
 
         padding: 0 2em;
 
-        background: @color-accent;
+        background: @color-primary;
+        box-shadow: @md-resting-shadow-12;
 
         > .header-titles {
             display: flex;
