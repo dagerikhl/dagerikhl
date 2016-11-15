@@ -15,13 +15,21 @@ html {
 
         font-family: @font-primary;
         color: @font-color;
+
+        .link {
+            &:hover {
+                cursor: pointer;
+
+                color: @link-color-active;
+            }
+        }
     }
 
     * {
-        -webkit-transition: @transition;
-        -moz-transition: @transition;
-        -o-transition: @transition;
-        transition: @transition;
+        -webkit-transition: @transition-fast;
+        -moz-transition: @transition-fast;
+        -o-transition: @transition-fast;
+        transition: @transition-fast;
 
         transition-property: @transition-properties;
     }

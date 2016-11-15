@@ -13,6 +13,8 @@
 
     background: black;
     opacity: 0;
+
+    transition: @transition;
 }
 
 nav {
@@ -29,6 +31,8 @@ nav {
     background: @color-accent;
     box-shadow: @md-resting-shadow-16;
 
+    transition: @transition;
+
     &:hover {
         left: 0;
 
@@ -37,9 +41,18 @@ nav {
         }
     }
 
-    > ul {
-        margin: 0;
+    > dl {
+        display: flex;
+        flex-direction: column;
 
-        list-style: none;
+        margin: 2em @width-closed;
+
+        > dt, > dd {
+            margin-top: .5em;
+        }
+
+        > dt {
+            font-weight: bold;
+        }
     }
 }
