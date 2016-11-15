@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CourseComponent } from './course/course.component';
 // import { CourseComponent } from './student-assistant/course/course.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent//,
+        NavbarComponent,
+        CourseComponent//,
         // CourseComponent
     ],
     imports: [
