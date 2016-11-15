@@ -4,6 +4,7 @@
 @width-closed: 20px;
 
 .cover {
+    visibility: hidden;
     position: fixed;
 
     height: 100%;
@@ -31,13 +32,24 @@ nav {
     background: @color-accent;
     box-shadow: @md-resting-shadow-16;
 
+    color: @font-color-secondary;
+
     transition: @transition;
 
     &:hover {
         left: 0;
 
         & ~ .cover {
+            visibility: visible;
             opacity: .25;
+        }
+    }
+
+    .link {
+        &:hover {
+            cursor: pointer;
+
+            color: @link-color-secondary-active;
         }
     }
 
