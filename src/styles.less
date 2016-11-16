@@ -16,7 +16,7 @@ html {
         font-family: @font-primary;
         color: @font-color-primary;
 
-        .link:not(.active-link), .link-secondary:not(.active-link) {
+        .link:not(.active-link), .link-secondary:not(.active-link-secondary) {
             &:hover {
                 cursor: pointer;
             }
@@ -38,7 +38,7 @@ html {
                 }
             }
         }
-        .link-secondary:not(.active-link) {
+        .link-secondary:not(.active-link-secondary) {
             &:hover {
                 color: @link-color-secondary-hover;
             }
@@ -54,12 +54,26 @@ html {
 
         .active-link, .active-link-secondary {
             padding-left: .5em;
+
+            &:hover {
+                cursor: default;
+            }
+
+            > a {
+                cursor: default;
+
+                text-decoration: none;
+            }
         }
         .active-link {
-            color: @link-color-primary-active;
+            > a {
+                color: @link-color-primary-active;
+            }
         }
         .active-link-secondary {
-            color: @link-color-secondary-active;
+            > a {
+                color: @link-color-secondary-active;
+            }
         }
     }
 
