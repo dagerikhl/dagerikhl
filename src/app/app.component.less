@@ -13,6 +13,8 @@
     margin-left: @navbar-width-closed;
 
     > .content-header {
+        .z-12;
+
         flex-shrink: 0;
         display: flex;
         align-items: center;
@@ -21,20 +23,20 @@
 
         padding: 0 2em;
 
-        z-index: 12;
 
         background: @color-primary;
-        box-shadow: @md-resting-shadow-12;
 
         color: @font-color-secondary;
 
         > .avatar {
             .link;
 
-            height: @avatar-size;
-            width: @avatar-size;
+            > img {
+                height: @avatar-size;
+                width: @avatar-size;
 
-            border-radius: 50%;
+                border-radius: 50%;
+            }
         }
 
         > .header-titles {
