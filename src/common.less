@@ -16,11 +16,11 @@
 @font-color-secondary-passive: darken(@font-color-secondary, 25%);
 
 // Links
-@link-color-primary-hover: darken(@font-color-primary, 10%);
-@link-color-primary-active: darken(@font-color-primary, 20%);
+@link-color-primary-hover: darken(@font-color-primary, 20%);
+@link-color-primary-active: lighten(@color-accent, 20%);
 
 @link-color-secondary-hover: darken(@font-color-secondary, 10%);
-@link-color-secondary-active: darken(@font-color-secondary, 20%);
+@link-color-secondary-active: lighten(@color-accent, 20%);
 
 // Transition and animation
 @transition: all 250ms ease-in-out;
@@ -34,3 +34,72 @@
 @md-resting-shadow-19: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 @md-resting-shadow-25: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 @md-resting-shadow-30: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+// Common classes
+.link, .link-secondary {
+    &:hover {
+        cursor: pointer;
+    }
+
+    > a {
+        text-decoration: none;
+    }
+}
+.link {
+    &:hover {
+        color: @link-color-primary-hover;
+    }
+
+    > a {
+        color: @font-color-primary;
+
+        &:hover {
+            color: @link-color-primary-hover;
+        }
+    }
+}
+.link-secondary {
+    &:hover {
+        color: @link-color-secondary-hover;
+    }
+
+    > a {
+        color: @font-color-secondary;
+
+        &:hover {
+            color: @link-color-secondary-hover;
+        }
+    }
+}
+
+.active-link, .active-link-secondary {
+    padding-left: .5em;
+
+    &:hover {
+        cursor: default;
+    }
+
+    > a {
+        cursor: default;
+
+        text-decoration: none;
+    }
+}
+.active-link {
+    > a {
+        color: @link-color-primary-active;
+
+        &:hover {
+            color: @link-color-primary-active;
+        }
+    }
+}
+.active-link-secondary {
+    > a {
+        color: @link-color-secondary-active;
+
+        &:hover {
+            color: @link-color-secondary-active;
+        }
+    }
+}

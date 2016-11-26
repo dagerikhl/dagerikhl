@@ -12,11 +12,14 @@ import { HomeComponent } from './home/home.component';
 
 import { StudentAssistantModule } from './student-assistant/student-assistant.module';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        NavbarComponent
+        NavbarComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,

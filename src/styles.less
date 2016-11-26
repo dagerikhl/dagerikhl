@@ -15,66 +15,10 @@ html {
 
         font-family: @font-primary;
         color: @font-color-primary;
+    }
 
-        .link:not(.active-link), .link-secondary:not(.active-link-secondary) {
-            &:hover {
-                cursor: pointer;
-            }
-
-            > a {
-                text-decoration: none;
-            }
-        }
-        .link:not(.active-link) {
-            &:hover {
-                color: @link-color-primary-hover;
-            }
-
-            > a {
-                color: @font-color-primary;
-
-                &:hover {
-                    color: @link-color-primary-hover;
-                }
-            }
-        }
-        .link-secondary:not(.active-link-secondary) {
-            &:hover {
-                color: @link-color-secondary-hover;
-            }
-
-            > a {
-                color: @font-color-secondary;
-
-                &:hover {
-                    color: @link-color-secondary-hover;
-                }
-            }
-        }
-
-        .active-link, .active-link-secondary {
-            padding-left: .5em;
-
-            &:hover {
-                cursor: default;
-            }
-
-            > a {
-                cursor: default;
-
-                text-decoration: none;
-            }
-        }
-        .active-link {
-            > a {
-                color: @link-color-primary-active;
-            }
-        }
-        .active-link-secondary {
-            > a {
-                color: @link-color-secondary-active;
-            }
-        }
+    q {
+        quotes: '\201C' '\201D' '\2018' '\2019';
     }
 
     * {
