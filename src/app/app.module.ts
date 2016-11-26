@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
+
 import { appRoutes } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -25,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         BrowserModule,
         FormsModule,
         HttpModule,
+        Angular2FontawesomeModule,
         StudentAssistantModule,
         RouterModule.forRoot(appRoutes)
     ],
