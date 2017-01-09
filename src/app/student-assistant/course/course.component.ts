@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'app-course',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
-    constructor() { }
+    private coursecode: string;
+
+    constructor(private route: ActivatedRoute) { }
 
     ngOnInit() {
+        this.route.params
+            .map(params => params['coursecode'])
+            .subscribe((coursecode: string) => {
+                if (coursecode != undefined) {
+                    this.coursecode = coursecode;
+                }
+            });
     }
 
 }

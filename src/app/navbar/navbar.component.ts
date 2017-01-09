@@ -38,6 +38,10 @@ export class NavbarComponent implements OnInit {
                     {
                         key: 'tdt4100',
                         value: 'TDT4100 (Java)'
+                    },
+                    {
+                        key: 'tdt4180',
+                        value: 'TDT4180 (MMI)'
                     }
                 ]
             },
@@ -49,7 +53,7 @@ export class NavbarComponent implements OnInit {
                 value: [
                     {
                         key: 'ph',
-                        value: 'Placeholder (can you not)'
+                        value: 'Placeholder'
                     }
                 ]
             }

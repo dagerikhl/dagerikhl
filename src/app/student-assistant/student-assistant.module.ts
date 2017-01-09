@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { studentAssistantRoutes } from './student-assistant.routes';
@@ -11,7 +12,9 @@ import { CourseComponent } from './course/course.component';
         StudentAssistantComponent,
         CourseComponent
     ],
-    imports: [ RouterModule.forChild(studentAssistantRoutes) ],
+    imports: [
+        CommonModule, RouterModule.forChild(studentAssistantRoutes)
+    ],
     exports: [ RouterModule ]
 })
 export class StudentAssistantModule { }
