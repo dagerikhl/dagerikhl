@@ -1,11 +1,80 @@
-<section *ngIf="coursecode === 'tdt4110'">
-    TDT4110 - Python
-</section>
+<div class="background-box">
+     <!--[style.background-image]="'url(res/background-' + coursecode === 'tdt4110' ? 'python' : coursecode === 'tdt4100' ? 'java' : '' + '.png)'">-->
 
-<section *ngIf="coursecode === 'tdt4100'">
-    TDT4100 - Java
-</section>
+    <section class="background {{coursecode === 'tdt4110' ? 'background-python' : coursecode === 'tdt4100' ? 'background-java' : ''}}"></section>
+    <!--<img *ngIf="coursecode === 'tdt4110'" [src]="'res/background-python.png'">-->
+    <!--<img *ngIf="coursecode === 'tdt4100'" [src]="'res/background-java.png'">-->
 
-<section *ngIf="coursecode === 'tdt4180'">
-    TDT4180 - MMI
-</section>
+    <section class="content-box">
+
+        <h1 class="pulsate-slow">Studass ITGK</h1>
+
+        <hr class="hr-separator">
+
+        <div class="header pulsate">
+            <div>
+                <div>
+                    TDT4110
+                </div>
+
+                <section *ngIf="coursecode === 'tdt4110'">
+                    <div class="p-specifier">
+                        <img [src]="'res/logo-python.png'">(Python)
+                    </div>
+                </section>
+                <section *ngIf="coursecode === 'tdt4100'">
+                    <div class="j-specifier">
+                        <img [src]="'res/j-logo.png'">(Java)
+                    </div>
+                </section>
+            </div>
+
+            <div class="course-group">Gruppe #NR#</div>
+        </div>
+
+        <h2>Dag Erik Homdrum Løvgren</h2>
+
+        <h4 class="pulsate">delovgre@stud.ntnu.no</h4>
+
+        <hr class="hr-separator">
+
+        <article *ngIf="coursecode === 'tdt4110'">
+            <span class="p-cmd">class</span> <span class="p-fnc">Studass</span>:<br>
+            <span class="tab1"><span class="p-cmd">def</span> <span class="p-fnc">__init__</span>(self, name, coffee):</span><br>
+            <span class="tab2">self.name, self.coffee = name, coffee</span><br>
+            <span class="tab1"><span class="p-cmd">def</span> <span class="p-fnc">okidoki</span>[...]:</span><br>
+            <span class="tab1"><span class="p-cmd">def</span> <span class="p-fnc">godkjenn</span>[...]:</span><br>
+            <span class="tab1"><span class="p-cmd">def</span> <span class="p-fnc">hjelp</span>[...]:</span><br>
+            <span class="tab1"><span class="p-cmd">def</span> <span class="p-fnc">levering</span>(self, stud, oving):</span><br>
+            <span class="tab2"><span class="p-cmd">if</span> self.okidoki(oving):</span><br>
+            <span class="tab3">self.godkjenn(oving, stud)</span><br>
+            <span class="tab2"><span class="p-cmd">else</span>: self.hjelp(stud)</span><br><br>
+            studass = Studass(<span class="p-str">"Dag Erik"</span>, <span class="p-cmd">True</span>) <span class="p-cmt"># Uten koffein og koffein, duger studassen ikke!</span>
+        </article>
+        <article *ngIf="coursecode === 'tdt4100'">
+            <span class="j-cmd">public class</span> Studass {{ '{' }} <span class="j-cmd">private String</span> name; <span class="j-cmd">private boolean</span> coffee;<br>
+            <span class="tab1">Studass(String name, boolean coffee) {{ '{' }} <span class="j-cmd">this</span>.name = name; <span class="j-cmd">this</span>.coffee = coffee; }</span><br>
+            <span class="tab1"><span class="j-cmd">public boolean</span> okidoki(Oving oving) {{ '{' }} [...] }</span><br>
+            <span class="tab1"><span class="j-cmd">public void</span> godkjenn(Oving oving, Student stud) {{ '{' }} [...] }</span><br>
+            <span class="tab1"><span class="j-cmd">public void</span> hjelp(Student stud) {{ '{' }} [...] }</span><br> } <span class="j-cmd">public class</span> GodkjennOvingHosDagErik {{ '{' }}<br>
+            <span class="tab1"><span class="j-cmd">public void</span> levering(Student stud, Oving oving) {{ '{' }}</span><br>
+            <span class="tab2">Studass <span class="j-str">studass</span> = <span class="j-cmd">new</span> Studass(<span class="j-str">"Dag Erik"</span>, true); <span class="j-cmt">\\ Uten koffein duger studassen ikke!</span></span><br>
+            <span class="tab2"><span class="j-cmd">if</span> (<span class="j-str">studass</span>.okidoki(oving)) {{ '{' }} <span class="j-str">studass</span>.godkjenn(oving, stud); }</span><br>
+            <span class="tab2"><span class="j-cmd">else</span> {{ '{' }} <span class="j-str">studass</span>.hjelp(stud); }</span><br>
+            <span class="tab1">}</span><br>
+            }
+        </article>
+
+    </section>
+
+    <div class="brb-button">
+        <input type="radio" id="show" name="group">
+        <div id="content">
+            <img [src]="'res/brb.png'">
+        </div>
+        <input type="radio" id="hide" name="group" checked>
+        <label for="hide" class="hide"></label>
+        <label for="show" class="show"></label>
+    </div>
+
+</div>
